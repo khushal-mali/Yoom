@@ -7,16 +7,11 @@ import "@stream-io/video-react-sdk/dist/css/styles.css";
 import "react-datepicker/dist/react-datepicker.css";
 
 import { Toaster } from "@/components/ui/toaster";
+import { constructMetadata } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Yoom - Enhance Communication",
-  description: "Video calling app",
-  icons: {
-    icon: "/icons/logo.svg",
-  },
-};
+export const metadata: Metadata = constructMetadata();
 
 export default function RootLayout({
   children,
